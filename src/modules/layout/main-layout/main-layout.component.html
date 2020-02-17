@@ -1,0 +1,72 @@
+
+<mat-toolbar color="primary" class="mat-toolbar-header">
+  <span class="mat-toolbar-header-content">XENIA CENTRAL</span>
+  
+  <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+
+  <span style="vertical-align: middle;">
+      <button mat-mini-fab (click)="sidenav.toggle()" style="background-color: #424242; border: 0; ">
+        <mat-icon aria-label="Menu"  class="mat-toolbar-header-content">menu</mat-icon>
+      </button>
+  </span> 
+
+  <span style="flex: 1 1 auto;">&nbsp;</span>
+
+  <span>
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="Search"/>
+      
+      <div class="input-group-append">
+        <button class="btn btn-success" type="submit">Go</button>
+      </div>  
+      
+    </div>
+  </span>
+<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+  
+
+  <div class="icon-text">
+    <mat-icon class="mat-icon-ext">account_circle</mat-icon>    
+ </div>
+
+
+<span>&nbsp;&nbsp;</span>
+
+
+
+</mat-toolbar>
+
+
+
+<mat-sidenav-container class="example-container">
+    <mat-sidenav class="mat-sidenav-ext"  #sidenav mode="side" [(opened)]="opened" (opened)="events.push('open!')"
+                 (closed)="events.push('close!')">
+        <mat-nav-list>
+        <mat-list-item>
+          <mat-icon mat-list-icon>person</mat-icon>
+          <h4 mat-line>Dashboard</h4>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon mat-list-icon>assignment</mat-icon>
+          <h4 mat-line>Rules</h4>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon mat-list-icon>domain</mat-icon>
+          <h4 mat-line>Endpoints</h4>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon mat-list-icon>folder_shared</mat-icon>
+          <h4 mat-line>File Maps</h4>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon mat-list-icon>account_circle</mat-icon>
+          <h4 mat-line>Features</h4>
+        </mat-list-item>
+      </mat-nav-list>          
+    </mat-sidenav>
+  
+    <mat-sidenav-content>                
+      <app-rule-config-layout></app-rule-config-layout>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+
