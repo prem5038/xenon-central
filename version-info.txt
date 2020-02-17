@@ -1,0 +1,9 @@
+xenia central version info:
+
+v1: Angular 9 with SASS
+v2: Bootstrap integration
+v3: Angular Material added
+v4: Bootstrap Module added
+v5: Header and Sidenav added
+v6: Sidenav menu items added and header search box added
+v7: Rule config (sample) table added, Header account icon added 
