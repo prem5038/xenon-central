@@ -4,6 +4,7 @@ import { MainLayoutComponent } from './main-layout.component';
 import { HeaderModule } from 'src/modules/navigation/toolbar/header/header.module';
 import { SideMenuBarModule } from 'src/modules/navigation/sidenav/side-menu-bar/side-menu-bar.module';
 import { RuleConfigLayoutModule } from 'src/modules/layout/rule-config-layout/rule-config-layout.module';
+import { TableLayoutModule } from 'src/modules/layout/table-layout/table-layout.module';
 
 import { MaterialModule } from 'src/modules/shared/material/material.module';
 
@@ -14,7 +15,8 @@ import { MaterialModule } from 'src/modules/shared/material/material.module';
     MaterialModule,
     HeaderModule,
     SideMenuBarModule,
-    RuleConfigLayoutModule
+    RuleConfigLayoutModule,
+    TableLayoutModule
   ]
 })
 export class MainLayoutModule { }

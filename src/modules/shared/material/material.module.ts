@@ -38,33 +38,62 @@ import {MatTreeModule} from '@angular/material/tree';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
+const SHARED_MODULES: any[] = [
+  CommonModule,
+  FormsModule, 
+  ReactiveFormsModule,
+  NgbModule
+];
 
-@NgModule({
-  declarations: [],
-  imports: [
-    CommonModule,
-    FormsModule, 
-    ReactiveFormsModule,
-    NgbModule,
+const MAT_MODULES: any[] = [    
     MatToolbarModule,
     MatSidenavModule,
     MatCheckboxModule,    
     MatListModule,
     MatIconModule,
-    MatTableModule
+    MatTableModule,
+    MatAutocompleteModule,
+    MatBadgeModule,
+    MatBottomSheetModule,
+    MatButtonModule,
+    MatButtonToggleModule,
+    MatCardModule,
+    MatCheckboxModule,
+    MatChipsModule,
+    MatStepperModule,
+    MatDatepickerModule,
+    MatDialogModule,
+    MatDividerModule,
+    MatExpansionModule,
+    MatGridListModule,
+    MatInputModule,                                                    
+    MatMenuModule,
+    MatNativeDateModule,
+    MatRippleModule,
+    MatPaginatorModule,
+    MatProgressBarModule,
+    MatProgressSpinnerModule,
+    MatRadioModule,
+    MatSelectModule,                          
+    MatSliderModule,
+    MatSlideToggleModule,
+    MatSnackBarModule,
+    MatSortModule,
+    MatTabsModule,						  
+    MatTooltipModule,
+    MatTreeModule  
+];
+
+
+@NgModule({
+  declarations: [],
+  imports: [
+    ...SHARED_MODULES,
+    ...MAT_MODULES
   ],
   exports: [
-    CommonModule,
-    FormsModule, 
-    ReactiveFormsModule,
-    NgbModule,
-    MatToolbarModule,
-    MatSidenavModule,
-    MatCheckboxModule,
-    MatListModule,
-    MatIconModule,
-    MatTableModule
+    ...SHARED_MODULES,
+    ...MAT_MODULES
   ]
-
 })
 export class MaterialModule { }
